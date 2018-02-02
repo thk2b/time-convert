@@ -20,7 +20,7 @@ class Unit {
     }
 
     /**
-     * Creates a function that converts this unit to a number of other units.
+     * Returns a function that converts this unit to a number of other units.
      * @param {...Function} units - Any number of units, in order, to which to convert this unit.
      * @returns {Function}
      */
@@ -28,7 +28,7 @@ class Unit {
         const mag = this.magnitude
             /**
              * @param {Number} n - Number of this unit to be converted.
-             * @returns {Array} - Each element coresponds to a unit, in the same order they were passed to `convert`
+             * @returns {Array} - Each element corresponds to a unit, in the same order they were passed to `convert`
              */
         return n => units.reduce(
                 (arr, unit) => [
@@ -40,12 +40,12 @@ class Unit {
             ** The last element of the array always represents the base unit (miliseconds).
             ** For each unit, replace the last element of the result array by the number of units it contains,
             ** and carry the remainder, which is in milliseconds, as the last element.
-            ** Finally, remove the last element (the last carried remainder). 
+            ** Finally, remove the last element (the last carried remainder).
             */ 
     }
 
     /**
-     * Creates a function that converts a number of other units to this unit.
+     * Returns a function that converts a number of other units to this unit.
      * @param {...Function} units - Any number of units, in order.
      * @returns {Function}
      */
