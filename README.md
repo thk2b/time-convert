@@ -1,7 +1,7 @@
 # convert-ms
-convert milliseconds to any format
+🕓 Convert milliseconds to any unit(s).
 
-# usage
+# Usage
 ```js
 const { convert, h, m, s, ms } = require('convert-ms')
 
@@ -13,13 +13,17 @@ What happends under the hood? The `convert` curried function calls all functions
 
 The only restriction is that units must be in descending order of magnitude.
 
-# philosphy
+# Philosophy
 `convert-ms` performs the convertion with the units you specify, but is agnostic as to what you want to do with the converted units.
 
-It is encouraged that you create your own wrapper functions for you specific use-case. For instance, to convert milliseconds to a `hh:mm:ss` format, you can write the following:
+It is encouraged that you create your own wrapper functions for you specific use-case. 
+For instance, to convert milliseconds to a `hh:mm:ss` format, you can write the following:
 
 ```js
-    convert(h,m,s)(14567890)
+const msToHms = ms => (
+    convert(h,m,s)(ms)
         .map(n => n < 10? '0'+n : n.toString()) // zero-pad
         .join(':')
+)
+msToHms(12345678) // '04:02:47'
 ```
