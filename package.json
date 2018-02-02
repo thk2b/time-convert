@@ -1,0 +1,32 @@
+{
+  "name": "convert-ms",
+  "version": "0.0.0",
+  "description": "convert miliseconds to any format",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test | faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thk2b/convert-ms.git"
+  },
+  "keywords": [
+    "time",
+    "convertion",
+    "ms-to-hms",
+    "hours",
+    "minutes",
+    "seconds",
+    "milliseconds"
+  ],
+  "author": "thk2b",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thk2b/convert-ms/issues"
+  },
+  "homepage": "https://github.com/thk2b/convert-ms#readme",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^4.8.0"
+  }
+}
