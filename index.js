@@ -1,7 +1,6 @@
 /**
  * @param {Number} msInUnit - Number of milliseconds in the unit.
- * @returns {Function} - Returns a unit function that takes a Number of milliseconds
- *                       and returns an array with the remainder followed by the quotient
+ * @returns {Function}
  */
 const createUnit = msInUnit => 
     /**
@@ -13,10 +12,10 @@ const createUnit = msInUnit =>
         ms % msInUnit
     ]
 
-const hours = createUnit(3600000)
-const minutes = createUnit(60000)
-const seconds = createUnit(1000)
-const milliseconds = createUnit(1)
+const h = hours = createUnit(3600000)
+const m = minutes = createUnit(60000)
+const s = seconds = createUnit(1000)
+const ms = milliseconds = createUnit(1)
 
 /**
  * Creates a converter function
@@ -44,5 +43,5 @@ module.exports = {
     createUnit,
     hours, minutes, seconds, milliseconds,
     /* unit shorthands */
-    h: hours, m: minutes, s: seconds, ms: milliseconds
+    h, m, s, ms
 }

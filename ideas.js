@@ -14,6 +14,7 @@ const convert_ = (ms, separator=':', zeropad=true ) => {
         .join(separator)
     return res.join(separator)
 }
+console.log(convert_(12345678))
 
 // convert(12345678, 'hh:mm:ss.') - parse format string
 // convert(h,m,s)(12345678)
