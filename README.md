@@ -3,10 +3,20 @@
 
 # Usage
 ```js
-const { convert, h, m, s, ms } = require('convert-ms')
+const { ms, s, m, h, d } = require('convert-ms')
+const { milliseconds, seconds, minutes, hours, days } = require('convert-ms')
 
-convert(h,m,s)(12345678) // [4, 2, 47]
-convert(m,s)(12345678) // [242, 47]
+/* convert milliseconds to hours, minutes and seconds */
+ms.to(h,m,s)(12345678) // [4, 2, 47]
+
+/* convert milliseconds to minutes and seconds */
+ms.to(m,s)(12345678) // [242, 47]
+
+/* get milliseconds from 12 hours, 23 minutes, 45 seconds*/
+ms.from(h,m,s)(12, 23, 45) // 44625000
+
+/* get hours from 123 minutes and 12 seconds */
+h.from(m,s)(123, 12) // 2.0533333333333332
 ```
 
 What happends under the hood? The `convert` curried function calls all functions passed to it, in order. The `h`, `m`, etc.. functions convert milliseconds to their respective units (hours, minutes, etc...). You can choose which unit functions to include in the conversion, or even create your own by using `createUnit`. 

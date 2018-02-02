@@ -20,12 +20,10 @@ class Unit {
     from(...units){
         return (...ns) => units.reduce(
             (sum, unit, i) => sum + ns[i] * unit.magnitude
-        , 0)
+        , 0) / this.magnitude
     }
 
 }
-
-const createUnit = msInUnit => ms => [ Math.floor(ms / msInUnit), ms % msInUnit ]
 
 const ms = milliseconds = new Unit(1)
 const s = seconds = new Unit(1000)

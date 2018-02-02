@@ -1,6 +1,6 @@
 const test = require('tape')
 
-const { Unit, h, m, s, ms } = require('../')
+const { Unit, d, h, m, s, ms } = require('../')
 
 test('Unit constructor', t => {
     const unit = new Unit(123)
@@ -48,8 +48,20 @@ test('Unit method `to` whith time units', t => {
 
 test('Unit method `from`', t => {
     t.equal(ms.from(s)(1), 1000)
-    t.equal(s.from(h)(2), 3600 * 1000 * 2)
+    t.equal(s.from(h, s)(2, 3), 3600 * 2 + 3)
     t.equal(ms.from(h,s)(1, 123), 3723000)
     t.equal(ms.from(h,m,s,ms)(1, 2, 3, 4), 3723004)
+    t.end()
+})
+
+test('`to` and `from` should cancel out', t => {
+    t.equal(
+        ms.from(h,m,s)(...ms.to(h,m,s)(44625000)),
+        44625000
+    )
+    t.equal(
+        ms.from(d,m,s)(...ms.to(d,m,s)(44625000)),
+        44625000
+    )
     t.end()
 })
