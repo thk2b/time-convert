@@ -2,9 +2,9 @@ const { convert, createUnit, hours, minutes, seconds, milliseconds } = require('
 
 
 console.log(
-    convert(hours,minutes,seconds,milliseconds)(14567890)
-        .map(n => n < 10? '0'+n : n.toString())
-        .join(':')
+    convert(minutes,seconds,milliseconds)(14567890)
+        // .map(n => n < 10? '0'+n : n.toString())
+        // .join(':')
 )
 
 const convert_ = (ms, separator=':', zeropad=true ) => {
