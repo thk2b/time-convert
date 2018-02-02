@@ -1,5 +1,5 @@
 {
-  "name": "convert-ms",
+  "name": "time-convert",
   "version": "0.0.0",
   "description": "convert miliseconds to any format",
   "main": "index.js",
