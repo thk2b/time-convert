@@ -50,5 +50,6 @@ test('Unit method `from`', t => {
     t.equal(ms.from(s)(1), 1000)
     t.equal(s.from(h)(2), 3600 * 1000 * 2)
     t.equal(ms.from(h,s)(1, 123), 3723000)
+    t.equal(ms.from(h,m,s,ms)(1, 2, 3, 4), 3723004)
     t.end()
 })
