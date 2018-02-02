@@ -1,5 +1,5 @@
 # convert-ms
-Convert milliseconds to any unit(s).
+🕓 Convert milliseconds to any unit(s).
 
 # Usage
 ```js
