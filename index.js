@@ -33,7 +33,7 @@ class Unit {
         return n => units.reduce(
                 (arr, unit) => [
                     ...arr.slice(0, -1), 
-                    ...unit.convert(arr[arr.length-1])
+                    ...unit.convert(arr[arr.length-1] * this.magnitude)
                 ]
             , [n]).slice(0,-1)
             /* 

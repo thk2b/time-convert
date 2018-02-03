@@ -41,7 +41,11 @@ test('Unit method `to` whith time units', t => {
     )
     t.deepEqual(
         ms.to(h,m,s,ms)(3723004),
-        [1,2,3,4]
+        [1, 2, 3, 4]
+    )
+    t.deepEqual(
+        h.to(m,s)(1),
+        [60, 0]
     )
     t.end()
 })
