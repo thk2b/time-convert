@@ -26,10 +26,10 @@ class Unit {
      */
     to(...units){
         const mag = this.magnitude
-            /**
-             * @param {Number} n - Number of this unit to be converted.
-             * @returns {Array} - Each element corresponds to a unit, in the same order they were passed to `convert`
-             */
+        /**
+         * @param {Number} n - Number of this unit to be converted.
+         * @returns {Array} - Each element corresponds to a unit, in the same order they were passed to `convert`
+         */
         return n => units.reduce(
                 (arr, unit) => [
                     ...arr.slice(0, -1), 
