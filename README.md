@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/duck-check.svg)](https://badge.fury.io/js/time-convert)
+[![npm version](https://badge.fury.io/js/time-convert.svg)](https://badge.fury.io/js/time-convert)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
 # time-convert
