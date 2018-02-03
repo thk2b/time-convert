@@ -34,7 +34,7 @@ test('Unit methods `to` and `from` return a function that returns the correct ty
 })
 
 test('Unit method `to` whith time units', t => {
-    t.deepEqual(ms.to(s)(1234), [1])
+    t.deepEqual(ms.to(s)(1234), [1.234])
     t.deepEqual(
         ms.to(h,s)(3723000),
         [1, 123]
