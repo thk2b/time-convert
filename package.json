@@ -1,6 +1,6 @@
 {
   "name": "time-convert",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "convert miliseconds to any format",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thk2b/convert-ms.git"
+    "url": "git+https://github.com/thk2b/time-convert.git"
   },
   "keywords": [
     "time",
@@ -22,9 +22,9 @@
   "author": "thk2b",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thk2b/convert-ms/issues"
+    "url": "https://github.com/thk2b/time-convert/issues"
   },
-  "homepage": "https://github.com/thk2b/convert-ms#readme",
+  "homepage": "https://github.com/thk2b/time-convert#readme",
   "devDependencies": {
     "faucet": "0.0.1",
     "tape": "^4.8.0"
