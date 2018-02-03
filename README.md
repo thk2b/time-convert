@@ -1,7 +1,11 @@
+[![npm version](https://badge.fury.io/js/duck-check.svg)](https://badge.fury.io/js/time-convert)
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+
 # time-convert
 🕓 Convert durations to other time unit(s).
 
 # Usage
+`npm install time-convert`
 ```js
 const { ms, s, m, h, d } = require('time-convert')
 /* verbose equivalent */
