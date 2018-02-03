@@ -39,3 +39,13 @@ const msToHms = ms => (
 )
 msToHms(12345678) // '04:02:47'
 ```
+
+# Contributing
+Contributions welcome.
+
+Possible additions:
+- Generalize to units other than time, such as distance, volume, or even currency using a 3rd party exchange-rate API.
+This addition requires making sure that precision is not lost in operations. 
+
+# Test
+`npm run test`
